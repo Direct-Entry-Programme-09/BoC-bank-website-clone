@@ -1,1 +1,58 @@
 @import url("style.css");
+
+main .container #col-1{
+    float: left;
+    width: 75%;
+    height: 90px;
+    padding: 20px 10px 10px;
+}
+main .container #col-2{
+    float: right;
+    width: 25%;
+    height: 90px;
+
+    padding: 20px 10px 10px;
+}
+main .container #col-2 img{
+    height: 100%;
+    width: 100%;
+}
+main .container #col-1 li/* :not(#col-1 li:last-child) */{
+    float: left;
+    width: 20%;
+}
+main .container #col-1 h5{
+    width: 20%;
+    float: left;
+    line-height: 45px;
+    font-size: 18px;
+}
+main .container #col-1 li a .country-code{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: black;
+    
+}
+main .container #col-1 li{
+    text-align: right;
+    
+}
+main .container #col-1 li a{
+    display: inline-block;
+    text-decoration: none;
+
+}
+main .container #col-1 li a:hover{
+    text-decoration: underline;
+
+}
+main .container #col-1 li a img{
+    border: 3px solid transparent;
+    
+}
+main .container #col-1 li a:hover>img{
+    border-color: #ffde00;
+    
+}

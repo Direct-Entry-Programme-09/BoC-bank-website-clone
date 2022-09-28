@@ -8,6 +8,11 @@
  .clear-fix{
     clear: both;
  }
+ .clearfix::after{
+    display: block;
+    content: "";
+    clear: both;
+ }
  /*Typography*/
  h1{
     font-size: 2rem;
@@ -18,7 +23,7 @@
     line-height: 2rem;
  }
  h3{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.8rem;
  }
  h4{
@@ -35,4 +40,296 @@
  }
 
  /*layout*/
+ /*Header*/
  
+
+ #misc-row{
+    background-color: #ffde00;
+ }
+ .container{
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+
+ }
+ #app-row{
+    height: 80px;
+ }
+ #app-row>.container{
+    height: 100%;
+    padding: 10px 0;
+ }
+ #logo{
+    float: left;
+    height: 60px;
+ }
+#app-row>.container>.wrapper{
+    float: right;
+    height: 100%;
+   
+ }
+ #app-row>.container>.wrapper>.row:first-child{
+    height: 40%;
+    width: 100%;
+ }
+ #app-row>.container>.wrapper>.row:nth-child(2){
+    height: 60%;
+    
+    width: 100%;
+ }
+ #lang-nav li{
+    float: left;
+    padding-left: 20px;
+    
+ }
+ nav li a{
+    font-size: 0.8rem;
+    color: black;
+    text-decoration: none; 
+ }
+ nav li a:hover{
+    color: #ff9d1e;
+    text-decoration: underline;
+ }
+ #lang-nav{
+    float: right;
+
+ }
+#nav-pages{
+    
+    float: left;
+    height: 100%;
+    text-align: right;
+    padding: 10px 0;
+}
+#nav-pages li{
+    float: left;
+    padding: 0 20px;
+}
+
+#smi-container{
+    float: right;
+    color: white;
+}
+
+#smi-container ul li{
+    float: left;
+    padding: 5px;
+    margin-left: 8px;
+    
+}
+#smi-container ul li ion-icon{
+    font-size: 1.2rem;
+    color: white;
+}
+#smi-container ul li:first-child{
+    background-color: #3f4da1;
+}#smi-container ul li:nth-child(2){
+    background-color: #57a0d7;
+}#smi-container ul li:nth-child(3){
+    background-color: #57a0d7;
+}#smi-container ul li:nth-child(4){
+    background-color: #d74527;
+}
+#nav-row{
+    height: 50px;
+    background-color: #1f1f1f;
+    
+}
+#nav-row .container li{
+    float: left;
+    height: 50px;
+}
+#nav-row .container li a{
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding: 15px 25px;
+
+    height: 50px;
+}
+#nav-row .container li a::after{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 10px;
+    width: 1px;
+    border: 6px solid #ff9d1e;
+    border-left-color:transparent ;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    z-index: -1;
+}
+#nav-row .container li a:hover{
+    color: black;
+    background-color: #ff9d1e;
+    text-decoration: none;
+    z-index: 1;
+}
+#misc-row{
+    height: 48px;
+    text-align: right;
+}
+#misc-row a{
+    display: inline-block;
+    height: 40px;
+    margin: 4px ;
+    padding: 0 10px;
+    background-color: #107ece;
+    color: white;
+    border-bottom: 2px solid #0f027b;
+    border-radius: 4px;
+    line-height: 40px;
+    font-size: 00.8rem;
+}
+#misc-row a:hover{
+    cursor: pointer;
+    background-color: #0865a9;
+}
+
+/*Footer*/
+
+footer #copy-right-row{
+    height: 50px;
+    background-color: #ffde00;
+}
+#copy-right-row .container{
+    padding: 16px 0;
+    color: #515254;
+    font-size: 0.7rem;
+    text-align: center;
+   
+}
+footer>.row .col{
+    float: left;
+    height: 215px;
+    width: 25%;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: white;
+}
+footer>.row .col a{
+    font-size: 0.7rem;
+    color: white;
+    text-decoration: none;
+    line-height: 1.2rem;
+}
+footer>.row .col a:hover{
+    color: #ffde00;
+    text-decoration: underline;
+    
+}
+footer>.row h3{
+    padding-bottom: 16px;
+}
+
+footer>.row .container .col:first-child{
+    background-color: #808285;
+
+   
+}footer>.row .container .col:nth-child(2){
+    background-color: #808285;
+    
+}
+footer>.row .container .col:nth-child(3){
+    background-color: #808285;
+    
+}
+footer>.row .container .col:nth-child(4){
+    background-color: #515554;
+    position: relative;
+    
+}
+footer>.row .container .col:last-child{
+    padding-left: 15px;
+}
+footer>.row .container .col p{
+    line-height: 1.4rem;
+    font-size: 0.7rem;
+}
+footer>.row .container .col p .extra{
+    padding-left: 23px;
+}
+footer>.row{
+    background-color: #808285;
+}
+footer>.row .container .col:last-child::after{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 215px;
+    width: 36%;
+    background-color: #515554;
+    left: 286px;
+    bottom: 0.5px;
+}
+aside{
+    font-weight: bold;
+    background-color: #1f1f1f;
+    position: fixed;
+    padding: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    transform: rotate(270deg);
+    right: -49px;
+    bottom: 25%;
+    z-index: 99999;
+}
+aside:hover{
+    right: -40px;
+}
+aside a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 0.8rem;
+    
+}
+aside a ion-icon{
+    color: black;
+    padding-right: 101px;
+    vertical-align: middle;
+    
+}
+#bubble-wrapper{
+    display: inline-block;
+    background-color: #ffde00;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+    font-size: 1rem;
+    position: relative;
+}
+#bubble-wrapper::before{
+    display: block;
+    content: "";
+    background-color: #ffde00;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 100%;
+    width: 5px;
+    height: 5px;
+    animation-name: wave;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wave{
+    from{
+        transform: scale(0);
+        opacity: 1;
+    }
+    to{
+        transform: scale(15);
+        opacity: 0.2;
+    }
+}
